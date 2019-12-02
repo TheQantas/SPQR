@@ -103,7 +103,7 @@ words[17][12] = ["desidero","de&#772;si&#772;dera&#772;re, de&#772;si&#772;dera&
 words[17][13] = ["incipio&#772;","incipere, ince&#772;pi&#772;, inceptum","incipere, incepi, inceptum","to begin","inception"];
 words[17][14] = ["na&#772;vigo&#772;","na&#772;viga&#772;re, na&#772;viga&#772;vi&#772;, na&#772;viga&#772;tum","navigare, navigavi, navigatum","to sail","navigation"];
 words[17][15] = ["neglego&#772;","neglegere, negle&#772;xi&#772;, negle&#772;ctum","neglegere, neglexi, neglestum","to neglect","negligible"];
-words[17][16] = ["recito&#772;","recita&#772;re, recita&#772;vi&#772;, recita&#772;tum","recitare, recitavi, recitatum","to real aloud","recital"];
+words[17][16] = ["recito&#772;","recita&#772;re, recita&#772;vi&#772;, recita&#772;tum","recitare, recitavi, recitatum","to read aloud","recital"];
 
 function changeChap() {
 	chapters = [];
