@@ -1,4 +1,4 @@
-var chapters = [13,14,15];
+var chapters = [13,14,15,16,17];
 var supported = [13,14,15,16,17];
 var randomChap;
 var randomWord;
