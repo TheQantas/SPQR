@@ -67,7 +67,7 @@ words[15][11] = ["iacio&#772;","iacere, ie&#772;ci&#772;, iactum","iacere, ieci,
 words[15][12] = ["timeo&#772;","time&#772;re, timui&#772;","timere, timui","to fear","timid"];
 words[16] = [];
 words[16][0] = ["aeta&#772;s","aeta&#772;tis, f.","aetatis, f.","period of life","eternal"];
-words[16][1] = ["audi&#772;tor","audi&#772;to&#772;ris, m.","auditoris, m.","hearer","auditor"];
+words[16][1] = ["audti&#772;tor","audi&#772;to&#772;ris, m.","auditoris, m.","hearer","auditor"];
 words[16][2] = ["cle&#772;mentia","cle&#772;mentiae, f.","clementiae, f.","mildness","clement"];
 words[16][3] = ["me&#772;ns","mentis, f.","mentis, f.","mind","mental"];
 words[16][4] = ["satura","saturae, f.","saturae, f.","satire","satirical"];
@@ -218,12 +218,16 @@ function checkAns() {
 		$(fullLex).removeClass("wrong").removeClass("almost");
 		$(fullLex).addClass("right");
 		correct++;
-	} else if (mac == 1 && document.getElementById("lex").value.toLowerCase() == decodeEntities(words[chapters[randomChap]][randomWord][2]).toLowerCase()) {
-		$(fullLex).removeClass("wrong").removeClass("right");
-		$(fullLex).addClass("almost");
 	} else {
-		$(fullLex).removeClass("right").removeClass("almost");
-		$(fullLex).addClass("wrong");
+		var lexical = document.getElementById("lex").value.toLowerCase();
+		lexical = lexical.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+		if (lexical == words[chapters[randomChap]][randomWord][2].toLowerCase()) {
+			$(fullLex).removeClass("right").removeClass("wrong");
+			$(fullLex).addClass("almost");
+		} else {
+			$(fullLex).removeClass("right").removeClass("almost");
+			$(fullLex).addClass("wrong");
+		}
 	}
 	
 	if (document.getElementById("def").value.toLowerCase() == words[chapters[randomChap]][randomWord][3].toLowerCase()) {
