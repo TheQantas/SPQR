@@ -99,22 +99,35 @@ words[17][8] = ["admitto&#772;","admittere, admi&#772;si&#772;, admissum","admit
 words[17][9] = ["coepi&#772;","coepisse, coeptum","coepisse, coeptum","began",""];
 words[17][10] = ["cupio&#772;","cupere, cupi&#772;vi&#772;, cupi&#772;tum","cupere, cupivi, cupitum","to desire","Cupid"];
 words[17][11] = ["de&#772;leo&#772;","de&#772;le&#772;re, de&#772;le&#772;vi&#772;, de&#772;le&#772;tum","delere, delevi, deletum","to destroy","delete"];
-words[17][12] = ["desidero","de&#772;si&#772;dera&#772;re, de&#772;si&#772;dera&#772;vi&#772;, de&#772;si&#772;dera&#772;tum","desiderare, desideravi, desideratum","to desire","desire"];
+words[17][12] = ["de&#772;si&#772;dero&#772;","de&#772;si&#772;dera&#772;re, de&#772;si&#772;dera&#772;vi&#772;, de&#772;si&#772;dera&#772;tum","desiderare, desideravi, desideratum","to desire","desire"];
 words[17][13] = ["incipio&#772;","incipere, ince&#772;pi&#772;, inceptum","incipere, incepi, inceptum","to begin","inception"];
 words[17][14] = ["na&#772;vigo&#772;","na&#772;viga&#772;re, na&#772;viga&#772;vi&#772;, na&#772;viga&#772;tum","navigare, navigavi, navigatum","to sail","navigation"];
 words[17][15] = ["neglego&#772;","neglegere, negle&#772;xi&#772;, negle&#772;ctum","neglegere, neglexi, neglestum","to neglect","negligible"];
 words[17][16] = ["recito&#772;","recita&#772;re, recita&#772;vi&#772;, recita&#772;tum","recitare, recitavi, recitatum","to read aloud","recital"];
 
 function changeChap() {
+	var xChap = chapters;
 	chapters = [];
 	var chapList = document.getElementsByClassName("chapCheck");
 	var chapLength = chapList.length;
 	for (var i = 1; i < chapLength + 1; i++) {
-		console.log(i);
 		if (chapList[i - 1].checked == true && supported.includes(i)) {
 			chapters.push(i);
 		}
 	}
+	if (arraysEqual(xChap,chapters) == false) {
+		advance()
+	}
+}
+
+function arraysEqual(a, b) {
+  if (a === b) return true;
+  if (a == null || b == null) return false;
+  if (a.length != b.length) return false;
+  for (var i = 0; i < a.length; ++i) {
+    if (a[i] !== b[i]) return false;
+  }
+  return true;
 }
 
 function disMode() {
