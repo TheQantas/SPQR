@@ -1,5 +1,5 @@
 var chapters = [13,14,15];
-var supported = [13,14,15];
+var supported = [13,14,15,16,17];
 var randomChap;
 var randomWord;
 var total = 0;
@@ -86,6 +86,24 @@ words[16][16] = ["pote&#772;ns","potentis","potentis","powerful","potent"];
 words[16][17] = ["senex","senis","senis","old","senate"];
 words[16][18] = ["quam","","","how",""];
 words[16][19] = ["rego&#772;","regere, re&#772;xi&#772;, re&#772;ctum","regere, rexi, rectum","to rule","regent"];
+words[17] = [];
+words[17][0] = ["libellus","libelli&#772;, m.","libelli, m.","little book","libel"];
+words[17][1] = ["qui&#772;","quae, quod","quae, quod","who","qui vive"];
+words[17][2] = ["caecus","caeca, caecum","caeca, caecum","blind","caecum"];
+words[17][3] = ["levis","leve","leve","light","levity"];
+worss[17][4] = ["aut","","","or",""];
+words[17][5] = ["aut...aut","","","either...or",""];
+words[17][6] = ["cito","","","quickly","excite"];
+words[17][7] = ["quoque","","","also",""];
+words[17][8] = ["admitto&#772;","admittere, admi&#772;si&#772;, admissum","admittere, admisi, admissum","to admit","admission"];
+words[17][9] = ["coepi&#772;","coepisse, coeptum","coepisse, coeptum","began",""];
+words[17][10] = ["cupio&#772;","cupere, cupi&#772;vi&#772;, cupi&#772;tum","cupere, cupivi, cupitum","to desire","Cupid"];
+words[17][11] = ["deleo&#772;","de&#772;le&#772;re, de&#772;le&#772;vi&#772;, de&#772;le&#772;tum","delere, delevi, deletum","to destroy","delete"];
+words[17][12] = ["desidero","de&#772;si&#772;dera&#772;re, de&#772;si&#772;dera&#772;vi&#772;, de&#772;si&#772;dera&#772;tum","desiderare, desideravi, desideratum","to desire","desire"];
+words[17][13] = ["incipio&#772;","incipere, ince&#772;pi&#772;, inceptum","incipere, incepi, inceptum","to begin","inception"];
+words[17][14] = ["na&#772;vigo&#772;","na&#772;viga&#772;re, na&#772;viga&#772;vi&#772;, na&#772;viga&#772;tum","navigare, navigavi, navigatum","to sail","navigation"];
+words[17][15] = ["neglego&#772;","neglegere, negle&#772;xi&#772;, negle&#772;ctum","neglegere, neglexi, neglestum","to neglect","negligible"];
+words[17][16] = ["recito&#772;","recita&#772;re, recita&#772;vi&#772;, recita&#772;tum","recitare, recitavi, recitatum","to real aloud","recital"];
 
 function changeChap() {
 	chapters = [];
