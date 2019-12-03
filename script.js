@@ -283,11 +283,15 @@ window.onkeydown = function(event) {
 		var pos = box.selectionStart;
 		var ante = x.substring(0,pos);
 		var post = x.substring(pos,x.length);
-		setTimeout(function() {
-			box.value = decodeEntities(ante + '&#772;' + post);
-			box.selectionStart = pos;
-			box.selectionEnd = pos;
-		}, 50);
+		var last = ante.substring(ante.length - 1, ante.length);
+		var vowels = ["a","e","i","o","u"];
+		if (vowels.includes(last) == true) {
+			setTimeout(function() {
+				box.value = decodeEntities(ante + '&#772;' + post);
+				box.selectionStart = pos;
+				box.selectionEnd = pos;
+			}, 50);
+		}
     }
 	if (event.keyCode == 13) {
 		action()
