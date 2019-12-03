@@ -193,6 +193,8 @@ function togSet() {
 	$("#setCont").toggle();
 }
 
+var streak = 0;
+
 function toPage(x) {
 	document.getElementsByClassName("setPage")[currentPage].style.display = "none";
 	document.getElementsByClassName("setPage")[x].style.display = "block";
@@ -203,7 +205,7 @@ function toPage(x) {
 
 function checkAns() {
 	total += 3;
-	
+	var right = true;
 	var newRow = document.createElement("div");
 	$(newRow).addClass("miniRow");
 	newRow.style.marginBottom = "10px";
@@ -240,6 +242,7 @@ function checkAns() {
 		} else {
 			$(fullLex).removeClass("right").removeClass("almost");
 			$(fullLex).addClass("wrong");
+			right = false;
 		}
 	}
 	
@@ -250,6 +253,7 @@ function checkAns() {
 	} else {
 		$(defin).removeClass("right");
 		$(defin).addClass("wrong");
+		right = false;
 	}
 	
 	if (document.getElementById("der").value.toLowerCase() == words[chapters[randomChap]][randomWord][4].toLowerCase()) {
@@ -259,17 +263,30 @@ function checkAns() {
 	} else {
 		$(deriv).removeClass("right");
 		$(deriv).addClass("wrong");
+		right = false;
+	}
+	
+	if (right == false) {
+		streak = 0;
+	} else {
+		streak++;
 	}
 	
 	document.getElementById("z").innerHTML = "Next";
-	document.getElementById("rate").innerHTML = correct + " / " + total + " | " + (correct / total * 100).toFixed(1) + "%";
+	document.getElementById("rate").innerHTML = correct + " / " + total + " | " + (correct / total * 100).toFixed(1) + "% | Streak: " + streak;
 }
 
 window.onkeydown = function(event) {
-	if (event.keyCode == 192 && mac == 1) {
-		var x = document.getElementById("lex").value;
+	var box = document.getElementById("lex");
+	if (event.keyCode == 192 && mac == 1 && document.activeElement === box) {
+		var x = box.value;
+		var pos = box.selectionStart;
+		var ante = x.substring(0,pos);
+		var post = x.substring(pos,x.length);
 		setTimeout(function() {
-			$("#lex").val( decodeEntities(x + '&#772;') );
+			box.value = decodeEntities(ante + '&#772;' + post);
+			box.selectionStart = pos;
+			box.selectionEnd = pos;
 		}, 50);
     }
 	if (event.keyCode == 13) {
