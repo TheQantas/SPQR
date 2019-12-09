@@ -1,11 +1,11 @@
-var chapters = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18];
+var chapters = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23];
 var randomChap;
 var randomWord;
 var total = 0;
 var correct = 0;
 var mac = true;
 var currentPage = 0;
-var list = [0,1,2,3];
+var list = [0,1,2,4];
 var dark = true;
 
 var words = [];
@@ -436,7 +436,116 @@ words[18][12] = ["lego&#772;","legere, le&#772;gi&#772;, le&#772;ctum","to read"
 words[18][13] = ["misceo&#772;","misce&#772;re, miscui&#772;, mixtum","to mix","to stir up","miscellaneous","mixture"];
 words[18][14] = ["moveo&#772;","move&#772;re, mo&#772;vi&#772;, mo&#772;tum","to move","to arouse","motive","mutiny"];
 words[18][15] = ["videor","vide&#772;ri&#772;, vi&#772;sus sum","to be seen","to seem","",""];
-
+words[19] = [];
+words[19][0] = ["argu&#772;mentum","argu&#772;menti&#772;, n.","proof","evidence","Not Available","Not Available"];
+words[19][1] = ["auctor","aucto&#772;ris, m.","increaser","author","Not Available","Not Available"];
+words[19][2] = ["beneficium","beneficii&#772;, n.","benefit","kindness","Not Available","Not Available"];
+words[19][3] = ["familia","familiae, f.","household","family","Not Available","Not Available"];
+words[19][4] = ["Graecia","Graeciae, f.","Greece","Greece","Not Available","Not Available"];
+words[19][5] = ["iu&#772;dex","iu&#772;dicis, m.","judge","juror","Not Available","Not Available"];
+words[19][6] = ["iu&#772;dicium","iu&#772;dicii&#772;, n.","judgment","decision","Not Available","Not Available"];
+words[19][7] = ["scelus","sceleris, n.","evil deed","crime","Not Available","Not Available"];
+words[19][8] = ["quis?","quid?","who?","whose?","Not Available","Not Available"];
+words[19][9] = ["qui&#772;?","quae?, quod?","what?","which?","Not Available","Not Available"];
+words[19][10] = ["certus","certa, certum","definite","sure","Not Available","Not Available"];
+words[19][11] = ["gravis","grave","heavy","important","Not Available","Not Available"];
+words[19][12] = ["immorta&#772;lis","immorta&#772;le","not subject to death","immortal","Not Available","Not Available"];
+words[19][13] = ["at","","but","but, mind you","Not Available","Not Available"];
+words[19][14] = ["nisi","","unless","except","Not Available","Not Available"];
+words[19][15] = ["contra&#772;","(+acc.)","against","against","Not Available","Not Available"];
+words[19][16] = ["iam","","now","already","Not Available","Not Available"];
+words[19][17] = ["de&#772;lecto&#772;","de&#772;lecta&#772;re, de&#772;lecta&#772;vi&#772;, de&#772;lecta&#772;tum","to delight","to charm","Not Available","Not Available"];
+words[19][18] = ["li&#772;bero&#772;","li&#772;bera&#772;re, li&#772;bera&#772;vi&#772;, li&#772;bera&#772;tum","to free","to liberate","Not Available","Not Available"];
+words[19][19] = ["paro&#772;","para&#772;re, para&#772;vi&#772;, para&#772;tum","to prepare","to provide","Not Available","Not Available"];
+words[20] = [];
+words[20][0] = ["coniu&#772;ra&#772;ti&#772;","coniu&#772;ra&#772;to&#772;rum, m.","conspirators","conspirators","Not Available","Not Available"];
+words[20][1] = ["cornu&#772;","cornu&#772;s, n.","horn","horn","Not Available","Not Available"];
+words[20][2] = ["fru&#772;ctus","fru&#772;ctu&#772;s, m.","fruit","profit","Not Available","Not Available"];
+words[20][3] = ["genu&#772;","genu&#772;s, n.","knee","knee","Not Available","Not Available"];
+words[20][4] = ["manus","manu&#772;s, f.","hand","handwriting","Not Available","Not Available"];
+words[20][5] = ["metus","metu&#772;s, m.","fear","dread","Not Available","Not Available"];
+words[20][6] = ["mo&#772;ns","montis, m.","mountain","mountain","Not Available","Not Available"];
+words[20][7] = ["sena&#772;tus","sena&#772;tu&#772;s, m.","senate","senate","Not Available","Not Available"];
+words[20][8] = ["se&#772;nsus","se&#772;nsu&#772;s, m.","feeling","sense","Not Available","Not Available"];
+words[20][9] = ["servitu&#772;s","servitu&#772;tis, f.","servitude","slavery","Not Available","Not Available"];
+words[20][10] = ["spi&#772;ritus","spi&#772;ritu&#772;s, m.","breath","spirit","Not Available","Not Available"];
+words[20][11] = ["versus","versu&#772;s, m.","line of verse","line of verse","Not Available","Not Available"];
+words[20][12] = ["commu&#772;nis","commu&#772;ne","common","general","Not Available","Not Available"];
+words[20][13] = ["dexter","dextra, dextrum","right","right-hand","Not Available","Not Available"];
+words[20][14] = ["sinister","sinistra, sinistrum","left","harmful","Not Available","Not Available"];
+words[20][15] = ["careo&#772;","care&#772;re, carui&#772;, caritu&#772;rum","to want","to be without","Not Available","Not Available"];
+words[20][16] = ["de&#772;fendo&#772;","de&#772;fendere, de&#772;fendi&#772;, de&#772;fe&#772;nsum","to ward off","to defend","Not Available","Not Available"];
+words[20][17] = ["disce&#772;do&#772;","disce&#772;dere, discessi&#772;, discessum","to go away","to depart","Not Available","Not Available"];
+words[20][18] = ["o&#772;di&#772;","o&#772;disse, o&#772;su&#772;rum","to hate","to hate","Not Available","Not Available"];
+words[20][19] = ["prohibeo&#772;","prohibe&#772;re, prohibui&#772;, prohibitum","to prevent","to prohibit","Not Available","Not Available"];
+words[20][20] = ["pro&#772;nu&#772;ntio&#772;","pro&#772;nu&#772;ntia&#772;re, pro&#772;nu&#772;ntia&#772;vi&#772;, pro&#772;nu&#772;ntia&#772;tum","to proclaim","to announce","Not Available","Not Available"];
+words[21] = [];
+words[21][0] = ["casa","casae, f.","house","cottage","Not Available","Not Available"];
+words[21][1] = ["causa","causae, f.","cause","reason","Not Available","Not Available"];
+words[21][2] = ["causa&#772;","","for the sake of","on account of","Not Available","Not Available"];
+words[21][3] = ["fenestra","fenestrae, f.","window","window","Not Available","Not Available"];
+words[21][4] = ["fi&#772;nis","fi&#772;nis, m.","end","limit","Not Available","Not Available"];
+words[21][5] = ["fi&#772;ne&#772;s","fi&#772;nium, m.","boundaries","territory","Not Available","Not Available"];
+words[21][6] = ["ge&#772;ns","gentis, f.","clan","race","Not Available","Not Available"];
+words[21][7] = ["mundus","mundi&#772;, m.","world","universe","Not Available","Not Available"];
+words[21][8] = ["na&#772;vis","na&#772;vis, f.","ship","boat","Not Available","Not Available"];
+words[21][9] = ["salu&#772;s","salu&#772;tis, f.","health","safety","Not Available","Not Available"];
+words[21][10] = ["Tro&#772;ia","Tro&#772;iae, f.","Troy","Troy","Not Available","Not Available"];
+words[21][11] = ["vi&#772;ci&#772;nus","vi&#772;ci&#772;ni&#772;, m.","neighbor","neighbor","Not Available","Not Available"];
+words[21][12] = ["vi&#772;ci&#772;na","vi&#772;ci&#772;nae, f.","neighbor","neighbor","Not Available","Not Available"];
+words[21][13] = ["vulgus","vulgi&#772;, n.","the common people","mob","Not Available","Not Available"];
+words[21][14] = ["asper","aspera, asperum","rough","harsh","Not Available","Not Available"];
+words[21][15] = ["atque, ac","","and also","and even","Not Available","Not Available"];
+words[21][16] = ["iterum","","again","a second time","Not Available","Not Available"];
+words[21][17] = ["contineo&#772;","contine&#772;re, continui&#772;, contentum","to hold together","to contain","Not Available","Not Available"];
+words[21][18] = ["iubeo&#772;","iube&#772;re, iussi&#772;, iussum","to bid","to order","Not Available","Not Available"];
+words[21][19] = ["labo&#772;ro&#772;","labo&#772;ra&#772;re, labo&#772;ra&#772;vi&#772;, labo&#772;ra&#772;tum","to labor","to be in distress","Not Available","Not Available"];
+words[21][20] = ["rapio&#772;","rapere, rapui&#772;, raptum","to seize","to snatch","Not Available","Not Available"];
+words[21][21] = ["relinquo&#772;","relinquere, reli&#772;qui&#772;, relictum","to leave behind","to abandon","Not Available","Not Available"];
+words[21][22] = ["scio&#772;","sci&#772;re, sci&#772;vi&#772;, sci&#772;tum","to know","to know","Not Available","Not Available"];
+words[21][23] = ["tango&#772;","tangere, tetigi&#772;, ta&#772;ctum","to touch","to touch","Not Available","Not Available"];
+words[22] = [];
+words[22][0] = ["die&#772;s","die&#772;i&#772;, m.","day","day","Not Available","Not Available"];
+words[22][1] = ["ferrum","ferri&#772;, n.","iron","sword","Not Available","Not Available"];
+words[22][2] = ["fide&#772;s","fidei&#772;, f.","faith","trust","Not Available","Not Available"];
+words[22][3] = ["ignis","ignis, m.","fire","fire","Not Available","Not Available"];
+words[22][4] = ["modus","modi&#772;, m.","measure","bound","Not Available","Not Available"];
+words[22][5] = ["re&#772;s","rei&#772;, f.","thing","matter","Not Available","Not Available"];
+words[22][6] = ["re&#772;s pu&#772;blica","rei&#772; pu&#772;blicae, f.","state","commonwealth","Not Available","Not Available"];
+words[22][7] = ["spe&#772;s","spei&#772;, f.","hope","hope","Not Available","Not Available"];
+words[22][8] = ["fe&#772;li&#772;x","fe&#772;li&#772;cis","lucky","happy","Not Available","Not Available"];
+words[22][9] = ["incertus","incerta, incertum","uncertain","unsure","Not Available","Not Available"];
+words[22][10] = ["Lati&#772;nus","Lati&#772;na, Lati&#772;num","Latin","Latin","Not Available","Not Available"];
+words[22][11] = ["medius","media, medium","middle","the middle of","Not Available","Not Available"];
+words[22][12] = ["quondam","","formerly","once","Not Available","Not Available"];
+words[22][13] = ["ultra&#772; (adv.)","","on the other side","beyond","Not Available","Not Available"];
+words[22][14] = ["ultra&#772; (prep.)","(+acc.)","on the other side","beyond","Not Available","Not Available"];
+words[22][15] = ["pro&#772;tinus","","immediately","immediately","Not Available","Not Available"];
+words[22][16] = ["cerno&#772;","cernere, cre&#772;vi&#772;, cre&#772;tum","to distinguish","to discern","Not Available","Not Available"];
+words[22][17] = ["e&#772;ripio&#772;","e&#772;ripere, e&#772;ripui&#772;, e&#772;reptum","to snatch away","to rescue","Not Available","Not Available"];
+words[22][18] = ["inquit","","he says","he said","Not Available","Not Available"];
+words[22][19] = ["tollo&#772;","tollere, sustuli&#772;, subla&#772;tum","to raise","lift up","Not Available","Not Available"];
+words[23] = [];
+words[23][0] = ["arx","arcis, f.","citadel","stronghold","Not Available","Not Available"];
+words[23][1] = ["dux","ducis, m.","leader","guide","Not Available","Not Available"];
+words[23][2] = ["equus","equi&#772;, m.","horse","horse","Not Available","Not Available"];
+words[23][3] = ["hasta","hastae, f.","spear","spear","Not Available","Not Available"];
+words[23][4] = ["i&#772;nsula","i&#772;nsulae, f.","island","island","Not Available","Not Available"];
+words[23][5] = ["li&#772;tus","li&#772;toris, n.","shore","coast","Not Available","Not Available"];
+words[23][6] = ["mi&#772;les","mi&#772;litis, m.","soldier","soldier","Not Available","Not Available"];
+words[23][7] = ["o&#772;ra&#772;tor","o&#772;ra&#772;to&#772;ris, m.","orator","speaker","Not Available","Not Available"];
+words[23][8] = ["sacerdo&#772;s","sacerdo&#772;tis, m.","priest","priest","Not Available","Not Available"];
+words[23][9] = ["aliquis","aliquid","someone","somebody","Not Available","Not Available"];
+words[23][10] = ["quisquis","quidquid","whoever","whatever","Not Available","Not Available"];
+words[23][11] = ["magnanimus","magnanima, magnanimum","great-hearted","brave","Not Available","Not Available"];
+words[23][12] = ["gaudeo&#772;","gaude&#772;re, ga&#772;vi&#772;sus sum","great-hearted","brave","Not Available","Not Available"];
+words[23][13] = ["ostendo&#772;","ostendere, ostendi&#772;, ostentum","to exhibit","to show","Not Available","Not Available"];
+words[23][14] = ["peto&#772;","petere, peti&#772;vi&#772;, peti&#772;tum","to seek","to beg","Not Available","Not Available"];
+words[23][15] = ["premo&#772;","premere, pressi&#772;, pressum","to press","to pursue","Not Available","Not Available"];
+words[23][16] = ["opprimo&#772;","opprimere, oppressi&#772;, oppressum","to suppress","to overwhelm","Not Available","Not Available"];
+words[23][17] = ["verto&#772;","vertere, verti&#772;, versum","to turn","to change","Not Available","Not Available"];
+words[23][18] = ["a&#772;verto&#772;","a&#772;ve&#772;rtere, a&#772;vertī, a&#772;versum","to turn away","to avert","Not Available","Not Available"];
+words[23][19] = ["reverto&#772;","reve&#772;rtere, revertī, reversum","to turn back","to turn back","Not Available","Not Available"];
 
 function changeChap() {
 	var xChap = chapters;
@@ -506,10 +615,14 @@ function togMac() {
 	}
 }
 
+var q = 0;
+
 function advance() {
 	randomChap = Math.floor( Math.random() * chapters.length );
-	randomWord = Math.floor( Math.random() * words[chapters[randomChap]].length );
+	//randomWord = Math.floor( Math.random() * words[chapters[randomChap]].length );
+	randomWord = q;
 	$("#fLexical").text($('<textarea />').html(words[chapters[randomChap]][randomWord][0]).text());
+	q++;
 }
 
 function action() {
@@ -574,7 +687,6 @@ function checkAns() {
 		$(fullLex).addClass("wrong");
 		right = false;
 	}
-	console.log(right + " - " + correct);
 	
 	var defNum = 2;
 	var derNum = 4;
@@ -594,7 +706,6 @@ function checkAns() {
 		if (d == 1) {
 			right = false;
 		}
-		console.log(right + " - " + correct);
 	}
 	
 	for (var v = 0; v < 2; v++) {
@@ -608,11 +719,11 @@ function checkAns() {
 		} else {
 			$(deriv).removeClass("right");
 			$(deriv).addClass("wrong");
+			list[3] = 4;
 		}
 		if (v == 1) {
 			right = false;
 		}
-		console.log(right + " - " + correct);
 	}
 	
 	if (right == false) {
