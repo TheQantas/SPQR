@@ -615,14 +615,10 @@ function togMac() {
 	}
 }
 
-var q = 0;
-
 function advance() {
 	randomChap = Math.floor( Math.random() * chapters.length );
-	//randomWord = Math.floor( Math.random() * words[chapters[randomChap]].length );
-	randomWord = q;
+	randomWord = Math.floor( Math.random() * words[chapters[randomChap]].length );
 	$("#fLexical").text($('<textarea />').html(words[chapters[randomChap]][randomWord][0]).text());
-	q++;
 }
 
 function action() {
