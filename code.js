@@ -645,13 +645,21 @@ function ranAdvance() {
 }
 
 function toFlag() {
-	chapNum = 0;
-	wordNum = 0;
-	ranMode = false;
-	flagged = [];
-	$("#fLexical").text(decodeEntities(words[chapters[chapNum]][0][0]));
-	redo = false;
-	currRedo = 0;
+	if (ranMode == true) {
+		chapNum = 0;
+		wordNum = 0;
+		ranMode = false;
+		flagged = [];
+		$("#manual, #bandera").show();
+		$("#fLexical").text(decodeEntities(words[chapters[chapNum]][0][0]));
+		redo = false;
+		currRedo = 0;
+	} else {
+		ranMode = true;
+		$("#manual, #bandera").hide();
+		$("#fLexical").text(decodeEntities(words[chapters[chapNum]][0][0]));
+		advance()
+	}
 }
 
 var nextWord = 0;
