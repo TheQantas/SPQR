@@ -18,13 +18,17 @@
 	width: auto;
 	padding: 10px;
 }
-#settings {
+#settings, #bandera {
 	height: 60px;
 	width: 60px;
 	float: right;
 	padding: 5px;
 	margin: 5px;
 	border-radius: 10px;
+}
+#settings:hover, #bandera:hover {
+	background-color: #595959;
+	cursor: pointer;
 }
 #setAct {
 	width: 80%;
@@ -107,10 +111,6 @@
 	height: 100px;
 	width: 100%;
 	background-color: #555;
-}
-#settings:hover {
-	background-color: #595959;
-	cursor: pointer;
 }
 #setCont {
 	height: 100vh;
@@ -200,6 +200,29 @@
 	height: 100px;
 	width: 100%;
 	background-color: #a22;
+}
+#message {
+	height: 50px;
+	width: 40%;
+	padding: 10px 20px;
+	border-radius: 10px;
+	line-height: 50px;
+	background-color: #777;
+	margin-top: 15px;
+	margin-left: 30%;
+	text-align: center;
+	font-size: 30px;
+	color: #eee;
+	font-family: 'Roboto', sans-serif;
+	display: none;
+}
+#override {
+	width: 20%;
+	text-align: center;
+}
+#override:hover {
+	text-decoration: underline;
+	cursor: pointer;
 }
 #rate {
 	font-size: 40px;
