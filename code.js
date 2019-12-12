@@ -551,7 +551,7 @@ words[23][17] = ["verto&#772;","vertere, verti&#772;, versum","to turn","to chan
 words[23][18] = ["a&#772;verto&#772;","a&#772;ve&#772;rtere, a&#772;vertī, a&#772;versum","to turn away","to avert","advertise","convert"];
 words[23][19] = ["reverto&#772;","reve&#772;rtere, revertī, reversum","to turn back","to turn back","advertise","convert"];
 words[23][20] = ["umquam","","ever","at any time","",""];
-words[23][21] = ["e&#772;duco&#772;","e&#772;duca&#772;, e&#772;duca&#772;vi&#772;, e&#772;duca&#772;tum","to bring uo","to educate","education","educator"];
+words[23][21] = ["e&#772;duco&#772;","e&#772;duca&#772;re, e&#772;duca&#772;vi&#772;, e&#772;duca&#772;tum","to bring uo","to educate","education","educator"];
 
 function changeChap() {
 	var xChap = chapters;
