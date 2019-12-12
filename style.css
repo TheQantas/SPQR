@@ -88,6 +88,12 @@
 .setRowsel {
 	background-color: #d2b76e;
 }
+.setRowmich:hover {
+	background-color: #ffcb05 !important;
+}
+.setRowselMich {
+	background-color: #ffcb05 !important;
+}
 .setPage {
 	height: calc(100% - 10px);
 	width: calc(100% - 10px);
@@ -106,6 +112,9 @@
 	height: 100%;
 	width: 80%;
 	border-left: 5px solid #d2b76e;
+}
+.rightSetmich {
+	border-left: 5px solid #ffcb05 !important;
 }
 #botSet {
 	height: 100px;
@@ -234,6 +243,9 @@
 	display: block;
 	margin: auto;
 }
+#rateMich {
+	color: #ffcb05 !important;
+}
 #check, #closeSet, #startbut {
 	color: #d2b76e;
 	border: 2px solid #d2b76e;
@@ -246,10 +258,23 @@
 	height: 66px;
 	margin: 15px;
 }
+.rateMich {
+	color: #ffcb05 !important;
+}
+.checkMich {
+	color: #ffcb05 !important;
+	border: 2px solid #ffcb05 !important;
+}
 #check:hover, #startbut:hover {
 	background-color: #d2b76e;
 	color: #a22;
 	cursor: pointer;
+}
+.checkMich2 {
+	background-color: #00274c !important;
+}
+.checkMich:hover {
+	background-color: #ffcb05 !important;
 }
 #check:focus, #closeSet:focus, #startbut:focus {
 	outline: none;
@@ -262,8 +287,16 @@
 	color: #555;
 	cursor: pointer;
 }
+.closeSetmich:hover {
+	background-color: #ffcb05 !important;
+	color: #555 !important;
+}
 .altClose:hover {
 	background-color: #d2b76e !important;
+	color: #ccc !important;
+}
+.altClosemich:hover {
+	background-color: #ffcb05 !important;
 	color: #ccc !important;
 }
 .altSett:hover {
@@ -330,11 +363,17 @@
 .darkText {
 	color: #222;
 }
-#z {
+.pale {
 	color: #d2b76e !important;
 }
-#z:hover {
+.pale:hover {
 	color: #a22 !important;
+}
+.maize {
+	color: #ffcb05 !important;
+}
+.maize:hover {
+	color: #00274c !important;
 }
 .lightbk {
 	background-color: #eee !important;
@@ -379,11 +418,17 @@
 .dCheck {
 	background-color: #ccc !important;
 }
+.startTextmich {
+	color: #ffcb05 !important;
+}
 .container:hover .chapCheck ~ .checkmark {
   background-color: #ccc;
 }
 .container .chapCheck:checked ~ .checkmark {
   background-color: #d2b76e !important;
+}
+.container .chapCheck:checked ~ .checkmarkMich {
+  background-color: #ffcb05 !important;
 }
 .checkmark:after {
   content: "";
@@ -427,6 +472,9 @@
   -webkit-transition: .4s;
   transition: .4s;
 }
+.sliderMich {
+	background-color: #00274c;
+}
 .slider:before {
   position: absolute;
   content: "";
@@ -439,7 +487,10 @@
   transition: .4s;
 }
 .toggle:checked + .slider {
-  background-color: #d2b76e
+  background-color: #d2b76e;
+}
+.toggleMich:checked + .slider {
+  background-color: #ffcb05;
 }
 .toggle:checked + .slider:before {
   -webkit-transform: translateX(26px);
@@ -467,6 +518,9 @@
 }
 .container .chapX:checked ~ .rad {
   background-color: #d2b76e;
+}
+.container .chapX:checked ~ .radMich {
+  background-color: #ffcb05;
 }
 .rad:after {
   content: "";
