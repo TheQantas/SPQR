@@ -11,6 +11,7 @@ var dark = true;
 var flagged = [];
 var redo = false;
 var currRedo = 0;
+var mich = false;
 
 var words = [];
 words[0] = [];
@@ -568,6 +569,48 @@ function changeChap() {
 	}
 }
 
+function michigan() {
+	if (mich == false) {
+		mich = true;
+		$(".setRow").addClass("setRowmich");
+		$(".setRowsel").removeClass("setRowsel").addClass("setRowselMich");
+		$("#rightSet").addClass("rightSetmich");
+		$(".rate").addClass("rateMich");
+		$("#check, #closeSet, #startbut").addClass("checkMich");
+		$("#closeSet").addClass("closeSetmich");
+		$(".altClose").addClass("altClosemich");
+		$("#z").removeClass("pale").addClass("maize");
+		$("#bottom").css('backgroundColor','#00274c');
+		$("#check").addClass("checkMich2");
+		$("#impera, #gear").css('fill','#ffcb05');
+		$("#rate").addClass("rateMich");
+		$(".toggle").addClass("toggleMich");
+		$(".slider").addClass("sliderMich");
+		$(".rad").addClass("radMich");
+		$(".checkmark").addClass("checkmarkMich");
+		$(".startText").addClass("startTextmich");
+	} else {
+		mich = false;
+		$(".setRow").removeClass("setRowmich");
+		$(".setRowsel").addClass("setRowsel").removeClass("setRowselMich");
+		$("#rightSet").removeClass("rightSetmich");
+		$(".rate").removeClass("rateMich");
+		$("#check, #closeSet, #startbut").removeClass("checkMich");
+		$("#closeSet").removeClass("closeSetmich");
+		$(".altClose").removeClass("altClosemich");
+		$("#z").addClass("pale").removeClass("maize");
+		$("#bottom").css('backgroundColor','#a22');
+		$("#check").removeClass("checkMich2");
+		$("#impera, #gear").css('fill','#d2b76e');
+		$("#rate").removeClass("rateMich");
+		$(".toggle").removeClass("toggleMich");
+		$(".slider").removeClass("sliderMich");
+		$(".rad").removeClass("radMich");
+		$(".checkmark").removeClass("checkmarkMich");
+		$(".startText").removeClass("startTextmich");
+	}
+}
+
 function override() {
 	var index = flagged.indexOf(addZero(chapNum) + addZero(wordNum));
 	if (index > -1) {
@@ -741,8 +784,13 @@ var streak = 0;
 function toPage(x) {
 	document.getElementsByClassName("setPage")[currentPage].style.display = "none";
 	document.getElementsByClassName("setPage")[x].style.display = "block";
-	$(".setRow:eq(" + currentPage + ")").removeClass("setRowsel");
-	$(".setRow:eq(" + x + ")").addClass("setRowsel");
+	if (mich == false) {
+		$(".setRow:eq(" + currentPage + ")").removeClass("setRowsel");
+		$(".setRow:eq(" + x + ")").addClass("setRowsel");
+	} else {
+		$(".setRow:eq(" + currentPage + ")").removeClass("setRowselMich");
+		$(".setRow:eq(" + x + ")").addClass("setRowselMich");
+	}
 	currentPage = x;
 }
 
