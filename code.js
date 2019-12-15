@@ -549,8 +549,8 @@ words[23][14] = ["peto&#772;","petere, peti&#772;vi&#772;, peti&#772;tum","to se
 words[23][15] = ["premo&#772;","premere, pressi&#772;, pressum","to press","to pursue","compress","depress"];
 words[23][16] = ["opprimo&#772;","opprimere, oppressi&#772;, oppressum","to suppress","to overwhelm","oppress","opression"];
 words[23][17] = ["verto&#772;","vertere, verti&#772;, versum","to turn","to change","advertise","convert"];
-words[23][18] = ["a&#772;verto&#772;","a&#772;ve&#772;rtere, a&#772;vertī, a&#772;versum","to turn away","to avert","advertise","convert"];
-words[23][19] = ["reverto&#772;","reve&#772;rtere, revertī, reversum","to turn back","to turn back","advertise","convert"];
+words[23][18] = ["a&#772;verto&#772;","a&#772;vertere, a&#772;vertī, a&#772;versum","to turn away","to avert","advertise","convert"];
+words[23][19] = ["reverto&#772;","revertere, reverti&#772;, reversum","to turn back","to turn back","advertise","revert"];
 words[23][20] = ["umquam","","ever","at any time","",""];
 words[23][21] = ["e&#772;duco&#772;","e&#772;duca&#772;re, e&#772;duca&#772;vi&#772;, e&#772;duca&#772;tum","to bring uo","to educate","education","educator"];
 
